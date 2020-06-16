@@ -61,13 +61,7 @@ public class CategoryService {
     @CacheEvict(allEntries=true)
 //  @CachePut(key="'category-one-'+ #p0")
     public void add(Category item){
-    Category category = Optional.ofNullable(item)
-                .map(i->i.getId())
-             /*   .filter(StringUtils::)*/
-                .flatMap(id->categoryDAO.findById(id))
-                .orElse(new Category());
-/*        ModelUtil.copyPropertiesIgnoreNull(item,category);*/
-        categoryDAO.save(category);
+        categoryDAO.save(item);
     }
 
     /**
