@@ -2,11 +2,9 @@ package com.tanghs.tmall.service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 import com.tanghs.tmall.pojo.Product;
 import com.tanghs.tmall.util.Page4Navigator;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
