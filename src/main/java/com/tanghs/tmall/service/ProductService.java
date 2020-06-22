@@ -80,7 +80,7 @@ public class ProductService {
     @CacheEvict(allEntries = true)
     public void add(Product bean) {
         productDAO.save(bean);
-       /* productESDAO.save(bean); */  //增加，删除，修改的时候，通过 ProductESDAO 同步到 es
+        productESDAO.save(bean);   //增加，删除，修改的时候，通过 ProductESDAO 同步到 es
     }
 
     /**
@@ -92,7 +92,7 @@ public class ProductService {
     @CacheEvict(allEntries = true)
     public void delete(Integer id) {
         productDAO.deleteById(id);
-        /*productESDAO.deleteById(id);*/  //增加，删除，修改的时候，通过 ProductESDAO 同步到 es
+        productESDAO.deleteById(id);  //增加，删除，修改的时候，通过 ProductESDAO 同步到 es
     }
 
     /**
@@ -116,7 +116,7 @@ public class ProductService {
     @CacheEvict(allEntries = true)
     public void update(Product bean) {
         productDAO.save(bean);
-       /* productESDAO.save(bean);*/    //增加，删除，修改的时候，通过 ProductESDAO 同步到 es
+        productESDAO.save(bean);    //增加，删除，修改的时候，通过 ProductESDAO 同步到 es
     }
 
     /**
