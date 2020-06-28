@@ -46,7 +46,4 @@ public class Product implements Serializable{
     private int reviewCount;                          //销量
     @Transient
     private int saleCount;                            //累计评价
-
-
-
 }

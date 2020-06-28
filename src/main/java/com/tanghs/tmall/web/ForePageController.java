@@ -4,6 +4,7 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
 
@@ -11,13 +12,14 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class ForePageController {
 
-
-    @GetMapping(value="/")                                              //首页_跳转
+    @GetMapping(value={"/","/home"})                                              //首页_跳转
     public String index(){
         return "redirect:home";
     }
+/*
     @GetMapping(value="/home")
     public String home(){ return "fore/home"; }
+*/
 
 
     @GetMapping(value="/register")                                      //注册页_跳转
