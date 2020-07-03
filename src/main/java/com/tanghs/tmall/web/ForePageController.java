@@ -14,7 +14,7 @@ public class ForePageController {
 
     @GetMapping(value={"/","/home"})                                              //首页_跳转
     public String index(){
-        return "redirect:home";
+        return "fore/home";
     }
 /*
     @GetMapping(value="/home")

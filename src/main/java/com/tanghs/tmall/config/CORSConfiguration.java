@@ -12,8 +12,8 @@ public class CORSConfiguration extends WebMvcConfigurerAdapter{
     public void addCorsMappings(CorsRegistry registry) {
         //所有请求都允许跨域
         registry.addMapping("/**")
-                .allowedOrigins("*")
-                .allowedMethods("*")
-                .allowedHeaders("*");
+                .allowedOrigins("*")      //响应首部中可以携带这个头部表示服务器允许哪些域可以访问该资源
+                .allowedMethods("*")      //该首部字段用于预检请求的响应，指明实际请求所允许使用的HTTP方法
+                .allowedHeaders("*");     //该首部字段用于预检请求的响应。指明了实际请求中允许携带的首部字段
     }
 }
