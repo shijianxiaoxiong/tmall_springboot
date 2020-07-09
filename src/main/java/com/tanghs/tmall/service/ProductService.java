@@ -223,7 +223,7 @@ public class ProductService {
         Sort sort = Sort.by(Sort.Direction.DESC, "id");
         Pageable pageable = PageRequest.of(start, size, sort);
 
-        SearchQuery searchQuery = new NativeSearchQueryBuilder()
+            SearchQuery searchQuery = new NativeSearchQueryBuilder()
                 .withPageable(pageable)
                 .withQuery(functionScoreQueryBuilder).build();
 

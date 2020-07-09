@@ -6,10 +6,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
    
 public class TestTmall {
-   
+
     public static void main(String args[]){
         //准备分类测试数据：
-   
+
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
