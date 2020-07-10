@@ -122,7 +122,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.21</version>
+            <version>8.0.16</version>
         </dependency>
 
         <!-- junit -->
@@ -163,15 +163,17 @@
     <build>
         <resources>
             <resource>
-                <directory>src/main/java</directory>
+                <directory>${basedir}/src/main/webapp</directory>
+                <!--注意此处必须要放在此目录下打成jar包后项目静态资源才能被访问到-->
+                <targetPath>META-INF/resources</targetPath>
                 <includes>
-                    <include>**/*.*</include>
+                    <include>**/**</include>
                 </includes>
             </resource>
             <resource>
-                <directory>src/main/resources</directory>
+                <directory>${basedir}/src/main/resources</directory>
                 <includes>
-                    <include>**/*.*</include>
+                    <include>**/**</include>
                 </includes>
             </resource>
         </resources>
