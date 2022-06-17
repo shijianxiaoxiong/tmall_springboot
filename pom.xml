@@ -56,7 +56,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.62</version>
+            <version>1.2.83</version>
         </dependency>
         <!--jackjson 在jdk8项目中使用jdk8新特性的话，jackjson需要新增依赖包，否则会出现乱码-->
      <!-- <dependency>
